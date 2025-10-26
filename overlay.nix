@@ -11,7 +11,7 @@ let
     else if stdenv.hostPlatform.isDarwin then "darwin"
     else throw "Unsupported OS for factory-cli";
   systemKey = stdenv.hostPlatform.system;
-  version = "0.21.5";
+  version = "0.22.3";
   baseUrl = "https://downloads.factory.ai";
 
   droidSha256 = {
@@ -22,7 +22,7 @@ let
   };
 
   droidSRI = {
-    "x86_64-linux" = "sha256-HdRJfwoqxCMqjFmYxYYzM9bDaqXMv307TCkRpTjQUvY=";
+    "x86_64-linux" = "sha256-zoLbZ1OEH2w81yXr0jZnsAyoc+DIRz8St653ohoy8Ug=";
   };
 
   droidSrc = prev.fetchurl (

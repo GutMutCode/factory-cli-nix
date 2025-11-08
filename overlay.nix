@@ -11,21 +11,21 @@ let
     else if stdenv.hostPlatform.isDarwin then "darwin"
     else throw "Unsupported OS for factory-cli";
   systemKey = stdenv.hostPlatform.system;
-  version = "0.22.10";
+  version = "0.22.14";
   baseUrl = "https://downloads.factory.ai";
 
   droidSha256 = {
-    "x86_64-linux" = "f69700823f9db38098c88910484405113d9c43e77f23e1d6525939480476c8b9";
-    "aarch64-linux" = "421524c577c03c92675da400542482e5ec1f10329846709254e0774c90a599dd";
-    "x86_64-darwin" = "22cadae1e0e1207a804c7be98ceeb5c711eef77e77b9bc711ce222ae31b4cd5f";
-    "aarch64-darwin" = "aac50c2ac36a94c71e661dc2590fe4d3b7844055c7925ec1ea092709f77bd256";
+    "x86_64-linux" = "ed4c442f39ceaa54b644d6482434ffcc287b22437718f936a8daccd4d7faad02";
+    "aarch64-linux" = "a15ddd276776622823b6cc3f4524370841324c43aacafbdab5051ae4243a9a84";
+    "x86_64-darwin" = "6edeeac8486fdbacd3aec53cefcbb262f2b740133a227be4527e049bcef88e0d";
+    "aarch64-darwin" = "f6928329f2b75d79a23271981d1c9ae7437913a7ad924bfb74fc194b4a19501d";
   };
 
   droidSRI = {
-    "x86_64-linux" = "sha256-9pcAgj+ds4CYyIkQSEQFE+WcQ+d/I+HWUlk5SAX2yLk=";
-    "aarch64-linux" = "sha256-QhSkxXfAPJJnWaAAVCSCXsH0EDKYRnCSVOB3TJClmd0=";
-    "x86_64-darwin" = "sha256-IsraHg4ZIHqATHvpjOu1xxHu9353ubxxHOIirjG0zV8=";
-    "aarch64-darwin" = "sha256-qsUMKsNalMceZhwVMpo93bRAgPMtsRZZqH1fuHX3S1Y=";
+    "x86_64-linux" = "sha256-7UxELznOqlS2RNZIJMT/wqh7IkN3Gfk2qNrOTV+q0Cc=";
+    "aarch64-linux" = "sha256-oV3dJ2e2YoIjbMg/RSQ3CEE6TEOqyvxatQUa5CQ5qoQ=";
+    "x86_64-darwin" = "sha256-bt7q2Ehn260zrsU478usYvK3QRPoin5FJfBJvO+K4A0=";
+    "aarch64-darwin" = "sha256-9pKDnytdfSYoMnGYRyrnpENpTWet+SL7dPwZS0oZUB0=";
   };
 
   droidSrc = prev.fetchurl (
